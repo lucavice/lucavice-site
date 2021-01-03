@@ -2,8 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
-/*@layer base {
+@layer base {
     p {
-        @apply text-yellow-700;
+      @apply subpixel-antialiased font-serif leading-7 lg:leading-8 lg:text-xl text-lg py-4 font-serif text-gray-700;
     }
-}*/
+  }

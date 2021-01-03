@@ -6,7 +6,7 @@
     
     {% resources type: "Meta" %}
 
-    <link rel="stylesheet" href="lucavice-tailwind-theme/assets/dist/css/lucavice.css" />
+    <link rel="stylesheet" href="/lucavice-tailwind-theme/assets/dist/css/lucavice.css" />
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap" rel="stylesheet">
     
@@ -14,7 +14,9 @@
     {% resources type: "Stylesheet" %}
     {% resources type: "HeadScript" %}
 </head>
-<body dir="{{ Culture.Dir }}">
+<body class="bg-gradient-to-t from-gray-50 to-blue-50" dir="{{ Culture.Dir }}">
+
+    {% shape "Menu", alias: "alias:main-menu", cache_id: "main-menu", cache_tag: "alias:main-menu" %}
 
     {% render_body %}
     
