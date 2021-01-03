@@ -1,7 +1,7 @@
 using OrchardCore.DisplayManagement.Manifest;
 
 [assembly: Theme(
-    Name = "lucavice-tailwind-theme",
+    Name = "Lucavice Tailwind Theme",
     Author = "Luca Vicenzotti",
     Website = "https://lucavice.com",
     Version = "0.0.1",

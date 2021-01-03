@@ -6,7 +6,9 @@
     
     {% resources type: "Meta" %}
 
-    <!-- INSERT REQUIRED RESOURCES HERE -->
+    <link rel="stylesheet" href="lucavice-tailwind-theme/assets/dist/css/lucavice.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap" rel="stylesheet">
     
     {% resources type: "HeadLink" %}
     {% resources type: "Stylesheet" %}
@@ -19,8 +21,6 @@
     <footer>
     {% render_section "Footer", required: false %}
     </footer>
-    
-    {% script name:"jquery", use_cdn:"true", at:"Foot" %}
     
     {% resources type: "FootScript" %}
 </body>
