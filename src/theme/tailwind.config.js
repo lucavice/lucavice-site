@@ -5,6 +5,14 @@ module.exports = {
         fontFamily: {
             'serif': ['Merriweather', 'ui-serif', 'Georgia']
         },
+        extend: {
+            zIndex: {
+             '-10': '-10',
+            },
+            width: {
+                '2full': '200%',
+              }
+          }
     },
     variants: {
         fontSize: ({ after }) => after(['first-letter']),
