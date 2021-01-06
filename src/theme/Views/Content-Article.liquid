@@ -1,5 +1,5 @@
 {% assign ContentItem = Model.ContentItem %}
-{% assign ImagePath = ContentItem.Content.Blog.Image.Paths.first %}
+{% assign ImagePath = ContentItem.Content.Article.Image.Paths.first %}
 
 <div class="bg-gradient-to-b from-green-600  to-green-800 flex justify-center">
     <div class="py-5 px-5 w-full xl:w-2/5 lg:w-3/5 md:w-4/5">
@@ -29,9 +29,14 @@
 </div>
 
 <div class="flex justify-center z-10">
-    <div class=" bg-gray-50 p-3 bg-opacity-90 py-1 px-5 w-full xl:w-2/5 lg:w-3/5 md:w-4/5">
-        {% shape_remove_item Model.Content "Article-Image" %}
-        {% shape_remove_item Model.Content "Article-Subtitle" %}
-        {{ Model.Content | shape_render }}
+    <div class="py-1 px-5 w-full xl:w-2/5 lg:w-3/5 md:w-4/5">
+        <div class="mx-5 lg:mx-10">
+            <img src="{{ ImagePath | asset_url }}" alt="Banner" />
+        </div>
+
+        <div
+            class=" mt-5 first-letter:text-green-800 lg:first-letter:text-8xl first-letter:text-7xl first-letter:float-left first-letter:p-4">
+            {{ Model.Content.HtmlBodyPart | shape_render }}
+        </div>
     </div>
 </div>
