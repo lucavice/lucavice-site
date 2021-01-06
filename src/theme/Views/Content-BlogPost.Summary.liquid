@@ -1,0 +1,14 @@
+{% assign ContentItem = Model.ContentItem %}
+{% assign ImagePath = ContentItem.Content.BlogPost.Image.Paths.first %}
+{% assign PostPath = ContentItem | display_url %}
+
+<div class="shadow-lg bg-white p-3 bg-opacity-90 rounded-lg transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-105">
+    <a href="{{PostPath}}" class="no-underline">
+        <div class="text-green-600 text-sm pb-1">
+            {{ ContentItem.PublishedUtc | date: "%b %d, %Y" }}
+        </div>
+        <div class="text-green-800 font-bold text-xl lg:text-2xl font-serif">{{ Model.ContentItem.DisplayText }}</div>
+        <div class="text-gray-400 text-base lg:text-lg font-sans font-normal">
+            {{ Model.ContentItem.Content.BlogPost.Subtitle.Text }}</div>
+    </a>
+</div>

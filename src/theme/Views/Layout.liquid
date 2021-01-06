@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="{{ Culture.Name }}">
-<head>
+<head class="min-h-screen">
     <meta charset="utf-8">
     <title>{% page_title Site.SiteName, position: "before", separator: " - " %}</title>
     
@@ -14,7 +14,8 @@
     {% resources type: "Stylesheet" %}
     {% resources type: "HeadScript" %}
 </head>
-<body class="bg-gradient-to-t from-gray-50 to-blue-50" dir="{{ Culture.Dir }}">
+
+<body class="bg-gradient-to-t from-gray-50 to-blue-50 min-h-screen" dir="{{ Culture.Dir }}">
 
     {% shape "Menu", alias: "alias:main-menu", cache_id: "main-menu", cache_tag: "alias:main-menu" %}
 

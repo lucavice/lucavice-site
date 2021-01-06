@@ -1,0 +1,8 @@
+<div class="mt-3 mb-5">
+    <h2 class="text-white font-bold text-2xl lg:text-3xl font-serif mb-5">Posts</h2>
+    {% for item in Model.ContentItems %}
+    <div class="my-5">
+        {{ item | shape_build_display: "Summary" | shape_render }}
+    </div>
+    {% endfor %}
+</div>

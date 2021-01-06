@@ -351,3 +351,6 @@ MigrationBackup/
 
 # App Data folder
 App_Data
+
+.vscode/
+is-cache/

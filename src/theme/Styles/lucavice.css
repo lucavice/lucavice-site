@@ -4,6 +4,12 @@
 
 @layer base {
     p {
-      @apply subpixel-antialiased font-serif leading-7 lg:leading-8 lg:text-xl text-lg py-4 font-serif text-gray-700;
+      @apply leading-7 lg:leading-8 lg:text-xl text-lg py-4 font-serif text-gray-700;
+    }  
+    ul, li {
+      @apply lg:text-xl text-lg font-serif text-gray-700;
+    }  
+    a {
+      @apply text-green-800 font-bold hover:text-green-500 underline;
     }
   }
