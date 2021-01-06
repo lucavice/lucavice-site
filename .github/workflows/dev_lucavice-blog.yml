@@ -6,7 +6,7 @@ name: Build and deploy ASP.Net Core app to Azure Web App - lucavice-blog
 on:
   push:
     branches:
-      - dev
+      - master
 
 jobs:
   build-and-deploy:
@@ -21,14 +21,12 @@ jobs:
         dotnet-version: '3.1.102'
 
     - name: Build with dotnet
-      run: |
-      cd src/website
-      dotnet build --configuration Release
+      working-directory: ./src/website
+      run: dotnet build --configuration Release
 
     - name: dotnet publish
-      run: |
-      cd src/website
-      dotnet publish -c Release -o ${{env.DOTNET_ROOT}}/myapp
+      working-directory: ./src/website
+      run: dotnet publish -c Release -o ${{env.DOTNET_ROOT}}/myapp
 
     - name: Deploy to Azure Web App
       uses: azure/webapps-deploy@v2
