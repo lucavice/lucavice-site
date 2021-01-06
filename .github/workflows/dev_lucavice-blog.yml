@@ -21,10 +21,14 @@ jobs:
         dotnet-version: '3.1.102'
 
     - name: Build with dotnet
-      run: dotnet build --configuration Release
+      run: |
+      cd src/website
+      dotnet build --configuration Release
 
     - name: dotnet publish
-      run: dotnet publish -c Release -o ${{env.DOTNET_ROOT}}/myapp
+      run: |
+      cd src/website
+      dotnet publish -c Release -o ${{env.DOTNET_ROOT}}/myapp
 
     - name: Deploy to Azure Web App
       uses: azure/webapps-deploy@v2
