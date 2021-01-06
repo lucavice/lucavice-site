@@ -6,7 +6,7 @@ name: Build and deploy ASP.Net Core app to Azure Web App - lucavice-blog
 on:
   push:
     branches:
-      - master
+      - main
 
 jobs:
   build-and-deploy:
