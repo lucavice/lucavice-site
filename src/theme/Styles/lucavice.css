@@ -10,6 +10,6 @@
       @apply lg:text-xl text-lg font-serif text-gray-700;
     }  
     a {
-      @apply text-green-800 font-bold hover:text-green-500 underline;
+      @apply text-palette4 font-bold hover:text-palette4 underline;
     }
   }

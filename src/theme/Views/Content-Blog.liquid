@@ -1,27 +1,27 @@
 {% assign ContentItem = Model.ContentItem %}
 {% assign ImagePath = ContentItem.Content.Blog.Image.Paths.first %}
 
-<div class="bg-gradient-to-b from-green-800  to-green-800 flex justify-center">
+<div class="bg-palette4 flex justify-center">
     <div class="py-5 lg:py-10 px-5 w-full xl:w-2/5 lg:w-3/5 md:w-4/5">
         <div class="flex items-center">
             <div class="w-20 h-20 relative mr-5">
                 <div
-                    class="group w-full h-full rounded-full overflow-hidden shadow-inner text-center bg-green table cursor-pointer">
+                    class="group w-full h-full rounded-full overflow-hidden shadow-inner text-center bg-palette4 table cursor-pointer">
                     <span class="hidden group-hover:table-cell text-white font-bold align-middle">KR</span>
                     <img src="{{ ImagePath | asset_url | resize_url: width:240 }}" alt="avatar"
                         class="object-cover object-center w-full h-full visible group-hover:hidden" />
                 </div>
             </div>
             <div>
-                <div class="text-green-50 font-bold text-3xl lg:text-5xl font-serif">{{ ContentItem.DisplayText }}</div>
-                <div class="text-green-300 text-xl lg:text-2xl">{{ Model.Content.HtmlBodyPart | shape_render }}</div>
+                <div class="text-white font-bold text-3xl lg:text-5xl font-serif">{{ ContentItem.DisplayText }}</div>
+                <div class="text-gray-600 text-xl lg:text-2xl font-serif">{{ Model.Content.HtmlBodyPart | shape_render }}</div>
             </div>
         </div>
     </div>
 </div>
 
 <div class="relative">
-    <div class="fill-current text-green-800 absolute top-0 left-0 w-2full lg:w-full -z-10">
+    <div class="fill-current text-palette4 absolute top-0 left-0 w-2full lg:w-full -z-10">
         <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
             <path
                 d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z"
