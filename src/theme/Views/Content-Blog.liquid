@@ -8,7 +8,7 @@
                 <div
                     class="group w-full h-full rounded-full overflow-hidden shadow-inner text-center bg-green table cursor-pointer">
                     <span class="hidden group-hover:table-cell text-white font-bold align-middle">KR</span>
-                    <img src="{{ ImagePath | asset_url }}" alt="avatar"
+                    <img src="{{ ImagePath | asset_url | resize_url: width:240 }}" alt="avatar"
                         class="object-cover object-center w-full h-full visible group-hover:hidden" />
                 </div>
             </div>
