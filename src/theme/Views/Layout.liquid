@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ Culture.Name }}">
+<html class="overflow-x-hidden" lang="{{ Culture.Name }}">
 <head class="min-h-screen">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8">
@@ -16,7 +16,7 @@
     {% resources type: "HeadScript" %}
 </head>
 
-<body class="bg-gradient-to-t from-gray-50 to-blue-50 min-h-screen" dir="{{ Culture.Dir }}">
+<body class="bg-gradient-to-t from-gray-50 to-blue-50 min-h-screen overflow-x-hidden" dir="{{ Culture.Dir }}">
 
     {% shape "Menu", alias: "alias:main-menu", cache_id: "main-menu", cache_tag: "alias:main-menu" %}
 
