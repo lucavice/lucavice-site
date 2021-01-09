@@ -4,6 +4,8 @@ A blog template, built with [Orchard Core CMS (RC2)](https://github.com/OrchardC
 
 ![screen](./src/theme/wwwroot/Theme.png)
 
+Live demo on https://blog.lucavice.com
+
 This repository contains the source code of my blog, which includes:
 
 - **src/website/Lucavice.Website**: the actual web application, which includes the references necessary to boot up **Orchard Core**
