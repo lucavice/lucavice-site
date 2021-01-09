@@ -5,7 +5,7 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using OrchardCore.Logging;
 
-namespace lucavice_site
+namespace Lucavice.Website
 {
     public class Program
     {

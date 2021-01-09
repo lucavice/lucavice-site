@@ -3,7 +3,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 
 
-namespace lucavice_site
+namespace Lucavice.Website
 {
     public class Startup
     {

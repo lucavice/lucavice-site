@@ -2,7 +2,7 @@ using Microsoft.Extensions.DependencyInjection;
 using OrchardCore.Modules;
 using OrchardCore.ResourceManagement;
 
-namespace LucaviceTailwindTheme
+namespace Lucavice.TailwindTheme
 {
     public class Startup : StartupBase
     {

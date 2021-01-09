@@ -1,6 +1,6 @@
 using OrchardCore.ResourceManagement;
 
-namespace LucaviceTailwindTheme
+namespace Lucavice.TailwindTheme
 {
     public class ResourceManifest : IResourceManifestProvider
     {
