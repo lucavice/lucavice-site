@@ -6,10 +6,22 @@
     p {
       @apply leading-7 lg:leading-8 lg:text-xl text-lg py-4 font-serif text-gray-700;
     }  
-    ul, li {
-      @apply lg:text-xl text-lg font-serif text-gray-700;
+    ul, ol {
+      @apply lg:text-xl text-lg font-serif text-gray-700 list-disc list-inside;
     }  
     a {
       @apply text-palette4 font-bold hover:text-palette4 underline;
+    }
+    h1 {
+      @apply text-palette4 font-bold lg:text-4xl text-3xl font-serif py-4;
+    }
+    h2 {
+      @apply text-palette4 font-bold lg:text-3xl text-2xl font-serif py-4;
+    }
+    h3 {
+      @apply text-palette4 font-bold lg:text-2xl text-xl font-serif py-4;
+    }
+    h4 {
+      @apply text-palette4 font-bold lg:text-xl text-lg font-serif py-4;
     }
   }

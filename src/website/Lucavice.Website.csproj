@@ -18,7 +18,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\modules\LucaviceSite.BunnyCDN\Lucavice.BunnyCDN.csproj" />
+    <ProjectReference Include="..\modules\Lucavice.BunnyCDN\Lucavice.BunnyCDN.csproj" />
     <ProjectReference Include="..\theme\Lucavice.TailwindTheme.csproj" />
   </ItemGroup>
 
