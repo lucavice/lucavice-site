@@ -59,8 +59,21 @@ You will notice that the css file is *very* large. This is because Tailwind is g
 
 When you are ready to deploy your application to production, you can use the command ```npm run build-prod```, which will include purge and minification subtaks, bringing down the css size from about 2000kb to 8kb (a total of only 3kb gzipped!). I run this command in my CI/CD build task only.
 
-Checkout the *gulp.js* file to see how it works.
+Checkout the ```gulp.js``` file to see how it works.
 
+## Customization
+
+You can change the ```.liquid``` templates provided in the ```Views``` folder, all the css is inlined with Tailwind utility classes.
+
+You can also change the theme base colors by modifying the palette colors in ```tailwind.config.js```.
+
+Remember that whenever you change either ```tailwind.config.js``` or ```Styles\lucavice.css```, you will have to re-run the gulp task to regenerate the Tailwind classes.
+
+## Deploy
+
+I deployed this app on Azure App Service. You will find a Github Action under ```.github\workflows\lucavice-blog.yml``` to see what's going on in the CI/CD process.
+
+You should be able to deploy this blog template easily on a Windows, Linux or containerized environment. You can follow standard processes on the Orchard Core documentation.
 
 
 
