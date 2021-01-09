@@ -4,7 +4,7 @@
 <div class="bg-palette4 flex justify-center">
     <div class="py-5 lg:py-10 px-5 w-full xl:w-2/5 lg:w-3/5 md:w-4/5">
         <div class="flex items-center">
-            <div class="w-20 h-20 relative mr-5">
+            <div class="flex-none w-20 min-w-min h-20 relative mr-5">
                 <div
                     class="group w-full h-full rounded-full overflow-hidden shadow-inner text-center bg-palette4 table cursor-pointer">
                     <span class="hidden group-hover:table-cell text-white font-bold align-middle">KR</span>
@@ -12,9 +12,9 @@
                         class="object-cover object-center w-full h-full visible group-hover:hidden" />
                 </div>
             </div>
-            <div>
-                <div class="text-white font-bold text-3xl lg:text-5xl font-serif">{{ ContentItem.DisplayText }}</div>
-                <div class="text-gray-600 text-xl lg:text-2xl font-serif">{{ Model.Content.HtmlBodyPart | shape_render }}</div>
+            <div class="flex-grow">
+                <h1 class="text-white font-bold text-3xl lg:text-5xl font-serif">{{ ContentItem.DisplayText }}</h1>
+                <h2 class="text-gray-600 text-xl lg:text-2xl font-serif">{{ Model.Content.HtmlBodyPart | shape_render }}</h2>
             </div>
         </div>
     </div>
