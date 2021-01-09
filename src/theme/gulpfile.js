@@ -1,6 +1,6 @@
 const gulp = require('gulp');
 const tailwindConfig = "tailwind.config.js"; 
-const mainCSS = "styles/lucavice.css"; 
+const mainCSS = "Styles/lucavice.css"; 
 var argv = require('yargs').argv;
 
 var prod = (argv.prod === undefined) ? false : true;
