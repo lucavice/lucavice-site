@@ -18,7 +18,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\theme\lucavice-tailwind-theme.csproj" />
+    <ProjectReference Include="..\theme\Lucavice.TailwindTheme.csproj" />
   </ItemGroup>
 
 </Project>
