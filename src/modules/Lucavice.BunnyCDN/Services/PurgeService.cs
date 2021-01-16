@@ -36,7 +36,7 @@ namespace Lucavice.BunnyCDN.Services
                 if (!response.IsSuccessStatusCode)
                 {
                     var responseString = await response.Content.ReadAsStringAsync();
-                    logger.LogError($"BunnyCDN purge was not succesful: {responseString}");
+                    logger.LogError("BunnyCDN purge was not succesful: {responseString}", responseString);
                 }
             }
         }
