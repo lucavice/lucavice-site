@@ -16,4 +16,17 @@
     <PackageReference Include="OrchardCore.ResourceManagement" Version="1.0.0-rc2-13450" />
   </ItemGroup>
 
+  <Target Name="Install npm" Condition="!Exists('node_modules')" BeforeTargets="Build">
+    <Message Text="Installing npm packages" />
+    <Exec Command="npm install" />
+  </Target>
+
+  <Target Name="BuildCss" Condition="'$(Configuration)' == 'Debug' And !Exists('wwwroot\assets\dist\css\lucavice.css')" BeforeTargets="Build">
+    <Exec Command="npm run build" />
+  </Target>
+
+  <Target Name="BuildCssProd" Condition="'$(Configuration)' == 'Release' And !Exists('wwwroot\assets\dist\css\lucavice.css')" BeforeTargets="Build">
+    <Exec Command="npm run build-prod" />
+  </Target>
+
 </Project>

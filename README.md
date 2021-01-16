@@ -23,23 +23,10 @@ This repository contains the source code of my blog, which includes:
 
 ### Setup
 
-To get started, clone the repo:
-
+To startup Orchard Core with this theme, simply:
 ```
 git clone https://github.com/lucavice/lucavice-site.git
-```
-
-Then, we need to restore dependencies and setup tailwind css with gulp.
-
-```
-cd lucavice-site\src\theme
-npm i && npm run build
-```
-
-Now we are ready to boot up the application
-
-```
-cd ..\website
+cd lucavice-site\src\website
 dotnet run
 ```
 
@@ -51,13 +38,14 @@ You should now see the same result as the screenshot shown above :)
 
 ## Tailwind: how it works
 
-When we run ```npm run build``` in the *theme* folder, we kick off a *gulp* task called *css*.
+When the application is built with ```dotnet build``` (implicitly called by ```dotnet run```), we are also kicking off a build task for producing the final css.
+In fact, msbuild kicks off  ```npm run build``` in the *theme* folder, with is an alias for a *gulp* task called *css*.
 
 This task starts a PostCSS build that takes ```tailwind.config.js``` and ```Styles\lucavice.css```, and converts them to the final css output in ```wwwroot\assets\dist\css\lucavice.css```
 
 You will notice that the css file is *very* large. This is because Tailwind is generating all possible combinations of css classes. This is useful during development, as you can freely use most utility classes provided by Tailwind without rebuilding.
 
-When you are ready to deploy your application to production, you can use the command ```npm run build-prod```, which will include purge and minification subtaks, bringing down the css size from about 2000kb to 8kb (a total of only 3kb gzipped!). I run this command in my CI/CD build task only.
+When you are ready to deploy your application to production, you can use the command ```npm run build-prod```, which will include purge and minification subtaks, bringing down the css size from about 2000kb to 8kb (a total of only 3kb gzipped!). You don't have to call this task explicitly in a CI/CD environment, as it is triggered automatically by msbuild if you are building in ```Release``` mode.
 
 Checkout the ```gulp.js``` file to see how it works.
 
@@ -71,7 +59,7 @@ Remember that whenever you change either ```tailwind.config.js``` or ```Styles\l
 
 ## Deploy
 
-I deployed this app on Azure App Service. You will find a Github Action under ```.github\workflows\lucavice-blog.yml``` to see what's going on in the CI/CD process.
+I deployed this app on Azure App Service. You will find a Github Action under ```.github\workflows\lucavice-blog.yml``` to see what's going on in the CI/CD process (it's essentially the default template for .NET Core apps on the app service)
 
 You should be able to deploy this blog template easily on a Windows, Linux or containerized environment. You can follow standard processes on the Orchard Core documentation.
 

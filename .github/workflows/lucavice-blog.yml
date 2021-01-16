@@ -19,9 +19,6 @@ jobs:
       with:
         node-version: '12'
 
-    - run: npm install && npm run build-prod
-      working-directory: ./src/theme
-
     - name: Set up .NET Core
       uses: actions/setup-dotnet@v1
       with:
