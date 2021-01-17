@@ -20,7 +20,7 @@ gulp.task("css", function () {
     if (prod) {
       task = task.pipe(
         purgecss({
-          content: ["**/*.liquid"],
+          content: ["**/*.liquid", "Styles/*.css"],
           defaultExtractor: content =>
             content.match(/[\w-/:]+(?<!:)/g) || []
         })

@@ -25,7 +25,7 @@
     <Exec Command="npm run build" />
   </Target>
 
-  <Target Name="BuildCssProd" Condition="'$(Configuration)' == 'Release' And !Exists('wwwroot\assets\dist\css\lucavice.css')" BeforeTargets="Build">
+  <Target Name="BuildCssProd" Condition="'$(Configuration)' == 'Release'" BeforeTargets="Build">
     <Exec Command="npm run build-prod" />
   </Target>
 
